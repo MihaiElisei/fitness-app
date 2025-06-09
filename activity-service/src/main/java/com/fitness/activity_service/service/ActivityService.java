@@ -50,6 +50,6 @@ public class ActivityService {
     }
 
     public ActivityResponse getActivityById(String activityId) {
-        return activityRepository.findById(activityId).map(this::mapToActivityResponse).orElseThrow(() ->new RuntimeException("Activity not found with id: " + activityId));
+        return activityRepository.findById(activityId).map(this::mapToActivityResponse).orElseThrow(() -> new RuntimeException("Activity not found"));
     }
 }
